@@ -6,9 +6,8 @@
         <h1>Bandas</h1>
 @auth
             @if(auth()->user()->isEditor())
-<a href="{{ route('bands.create') }}" class="btn btn-primary">
-    <i class="fas fa-plus"></i> Nova Banda
-</a>
+<a href="{{ route('bands.create') }}" class="btn btn-primary">Adicionar Banda</a>
+
             @endif
         @endauth
 

@@ -66,7 +66,7 @@ Route::middleware(['auth'])->group(function () {
     */
     Route::middleware(['role:editor,admin,superadmin'])->group(function () {
         // CRUD completo para bandas (exceto visualização pública)
-        Route::resource('bands', BandController::class)->except(['index', 'show']);
+        Route::resource('bands', BandController::class)->except(['index', 'show',]);
 
         // CRUD completo para álbuns aninhados (exceto visualização pública)
         Route::resource('bands.albums', AlbumController::class)->except(['index', 'show']);
