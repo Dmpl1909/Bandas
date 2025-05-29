@@ -44,18 +44,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0 shadow-sm h-100">
-                                <div class="card-body text-center">
-                                    <i class="fas fa-compact-disc fa-3x text-success mb-3"></i>
-                                    <h5>Total de Álbuns</h5>
-                                    <p class="display-6">{{ App\Models\Album::count() }}</p>
-                                    <a href="{{ route('albums.index') }}" class="btn btn-outline-success">
-                                        Ver Álbuns
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

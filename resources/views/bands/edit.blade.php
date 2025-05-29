@@ -1,8 +1,7 @@
 @extends('layouts.app')
-
-@section('title', 'Adicionar Nova Banda')
-
+@section('title', 'Editar Banda')
 @section('content')
+
 <div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -10,7 +9,7 @@
                 <div class="card-header bg-primary text-white">
                     <h4 class="mb-0">
                         <i class="fas fa-plus-circle me-2"></i>
-                        Nova Banda
+                        Editar ({{ $band->name }})
                     </h4>
                 </div>
 
@@ -18,23 +17,13 @@
                     <form action="{{ route('bands.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nome da Banda *</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                   id="name" name="name" value="{{ old('name') }}" required>
-                            @error('name')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
 
                         <div class="mb-3">
-                            <label for="photo" class="form-label">Foto da Banda *</label>
-                            <input type="file" class="form-control "
-                                   id="photo" name="photo" >
-                            @error('photo')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                            <small class="text-muted">Formatos: JPEG, PNG (Max: 2MB)</small>
+                            <label for="photo" class="form-label">Foto da Banda </label>
+                            <input type="file" class="form-control"
+                                   id="photo" name="photo">
+
+                            <small class="text-muted">Formatos: JPEG, PNG </small>
                         </div>
 
                         <div class="mb-3">
@@ -61,3 +50,4 @@
     </div>
 </div>
 @endsection
+

@@ -6,8 +6,9 @@
         <h1>Bandas</h1>
 @auth
             @if(auth()->user()->isEditor())
-<a href="{{ route('bands.create') }}" class="btn btn-primary">Adicionar Banda</a>
-
+<a href="{{ route('bands.create') }}" class="btn btn-primary">
+    <i class="fas fa-plus"></i> Nova Banda
+</a>
             @endif
         @endauth
 
@@ -26,7 +27,6 @@
                     <img src="{{ asset($band->photo_path) }}" class="card-img-top" alt="{{ $band->name }}" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">{{ $band->name }}</h5>
-                        <p class="card-text">{{ $band->albums_count }} álbuns</p>
                         <p class="card-text text-truncate">{{ $band->description }}</p>
                     </div>
                     <div class="card-footer bg-white">
