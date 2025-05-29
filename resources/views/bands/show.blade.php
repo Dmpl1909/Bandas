@@ -17,20 +17,7 @@
 
             <h3 class="mt-4">Álbuns ({{ $band->albums_count }})</h3>
 
-            @if($band->albums->count() > 0)
-                <div class="list-group">
-                    @foreach($band->albums as $album)
-                        <a href="{{ route('bands.albums.show', [$band, $album]) }}"
-                           class="list-group-item list-group-item-action">
-                            {{ $album->title }} ({{ $album->release_date->format('Y') }})
-                        </a>
-                    @endforeach
-                </div>
-            @else
-                <div class="alert alert-info">
-                    Nenhum álbum cadastrado para esta banda.
-                </div>
-            @endif
+
 
             <div class="mt-4">
                 <a href="{{ route('bands.index') }}" class="btn btn-secondary">

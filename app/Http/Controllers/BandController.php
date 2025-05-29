@@ -33,7 +33,7 @@ class BandController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'photo' => 'required|image|mimes:jpeg,png,jpg',
             'description' => 'nullable|string',
         ]);
 
@@ -54,7 +54,7 @@ class BandController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg',
             'description' => 'nullable|string',
         ]);
 

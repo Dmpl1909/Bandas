@@ -34,7 +34,7 @@
                             @error('photo')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                            <small class="text-muted">Formatos: JPEG, PNG (Max: 2MB)</small>
+                            <small class="text-muted">Formatos: JPEG, PNG </small>
                         </div>
 
                         <div class="mb-3">
